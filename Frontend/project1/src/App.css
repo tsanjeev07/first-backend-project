@@ -1,0 +1,26 @@
+.app-shell { min-height: 100vh; }
+.hero { background: #173c35; color: #f7f5f0; display: flex; justify-content: space-between; align-items: end; padding: 72px max(7vw, 24px) 64px; }
+.eyebrow, .section-label { color: #c8d99b; font-size: 11px; font-weight: 700; letter-spacing: .16em; margin: 0 0 14px; }
+.hero h1 { font: 700 clamp(38px, 6vw, 76px)/.98 'Playfair Display', serif; margin: 0; max-width: 720px; letter-spacing: -.03em; }
+.intro { color: #c7d2ca; font-size: 16px; margin: 22px 0 0; }
+.post-count { display: flex; flex-direction: column; align-items: end; color: #c7d2ca; }
+.post-count strong { color: #c8d99b; font: 700 54px 'Playfair Display', serif; line-height: 1; }
+.content { max-width: 1160px; margin: 0 auto; padding: 48px max(7vw, 24px) 80px; }
+.upload-card { background: white; border: 1px solid #e3e3dc; border-radius: 18px; display: grid; grid-template-columns: 1.2fr 1.3fr 1.6fr auto; gap: 16px; align-items: center; padding: 22px; box-shadow: 0 14px 35px #183d3510; }
+.upload-card h2, .gallery h2 { font: 600 25px 'Playfair Display', serif; margin: 0; }
+.file-picker { border: 1px dashed #aebdb1; border-radius: 10px; padding: 13px 15px; cursor: pointer; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: #557064; }
+.file-picker input { display: none; }
+.caption-input { border: 1px solid #d9dfd9; border-radius: 10px; padding: 13px 15px; outline: none; }
+.caption-input:focus { border-color: #417e68; }
+button { border: 0; background: #d4e69d; color: #183d35; border-radius: 10px; padding: 14px 20px; font-weight: 700; cursor: pointer; }
+button:disabled { cursor: wait; opacity: .65; }
+.gallery { margin-top: 62px; }
+.gallery-heading { margin-bottom: 22px; }
+.status { color: #6b7c73; padding: 30px 0; }
+.error-message { background: #fff1ee; color: #a54335; border-radius: 10px; padding: 13px 16px; margin: 20px 0 -26px; }
+.post-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+.post-card { background: white; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 24px #183d3512; }
+.post-card img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+.post-card p { margin: 0; padding: 15px 16px 17px; color: #496259; }
+@media (max-width: 800px) { .hero { padding-top: 48px; } .upload-card { grid-template-columns: 1fr 1fr; } .upload-card > div:first-child { grid-column: 1 / -1; } .upload-card button { width: 100%; } }
+@media (max-width: 520px) { .hero { align-items: start; flex-direction: column; gap: 30px; } .post-count { align-items: start; } .upload-card { grid-template-columns: 1fr; } .upload-card > div:first-child { grid-column: auto; } }
